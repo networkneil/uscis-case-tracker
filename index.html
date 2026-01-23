@@ -2,19 +2,150 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>USCIS Case Tracker — Client-Side Only</title>
+  <title>USCIS Case Tracker — Free Privacy-Focused Immigration Case Status API Tracker</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-  <meta name="description" content="A privacy-focused USCIS case tracker that runs entirely in your browser. Track multiple cases, view unified timeline, and monitor updates."/>
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="USCIS API Case Tracker — Free Privacy-Focused Immigration Case Status Tracker"/>
+  <meta name="description" content="Track your USCIS immigration case status with complete privacy. 100% client-side tracker with unified timeline, multiple case support, and automatic updates. No data sent to servers. Free and open source."/>
+  <meta name="keywords" content="USCIS case tracker, immigration case status, green card tracker, visa tracker, I-485 tracker, I-765 tracker, I-131 tracker, USCIS timeline, immigration status, case status tracker, privacy-focused, client-side tracker, free USCIS tracker"/>
+  <meta name="author" content="USCIS Case Tracker"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="language" content="English"/>
+  <meta name="revisit-after" content="7 days"/>
+  <meta name="geo.region" content="US"/>
+  <meta name="geo.placename" content="United States"/>
+  <meta name="rating" content="general"/>
+  <meta name="distribution" content="global"/>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://humanstack.github.io/uscis-case-tracker/"/>
+  <meta property="og:title" content="USCIS Case Tracker — Free Privacy-Focused Immigration Case Status Tracker"/>
+  <meta property="og:description" content="Track your USCIS immigration case status with complete privacy. 100% client-side tracker with unified timeline, multiple case support, and automatic updates. No data sent to servers."/>
+  <meta property="og:image" content="https://humanstack.github.io/uscis-case-tracker/og-image.png"/>
+  <meta property="og:site_name" content="USCIS Case Tracker"/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image"/>
+  <meta property="twitter:url" content="https://humanstack.github.io/uscis-case-tracker/"/>
+  <meta property="twitter:title" content="USCIS Case Tracker — Free Privacy-Focused Immigration Case Status Tracker"/>
+  <meta property="twitter:description" content="Track your USCIS immigration case status with complete privacy. 100% client-side tracker with unified timeline and automatic updates."/>
+  <meta property="twitter:image" content="https://humanstack.github.io/uscis-case-tracker/twitter-image.png"/>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://humanstack.github.io/uscis-case-tracker/"/>
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json"/>
+
+  <!-- Theme and App Icons -->
   <meta name="theme-color" content="#2563eb"/>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>"/>
   <meta name="color-scheme" content="light"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+  <meta name="apple-mobile-web-app-title" content="USCIS Tracker"/>
+
+  <!-- Structured Data / JSON-LD for WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "USCIS Case Tracker",
+    "alternateName": "Immigration Case Status Tracker",
+    "description": "A privacy-focused USCIS immigration case tracker that runs entirely in your browser. Track multiple cases, view unified timeline, and monitor updates without sending any data to external servers.",
+    "url": "https://humanstack.github.io/uscis-case-tracker/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "100% client-side processing",
+      "Zero data sent to servers",
+      "Track multiple USCIS cases",
+      "Unified timeline view",
+      "Automatic date grouping",
+      "Receipt number masking",
+      "Smart insights on case updates",
+      "JSON data comparison",
+      "Reddit-friendly export",
+      "Business hours detection"
+    ],
+    "screenshot": "https://humanstack.github.io/uscis-case-tracker/screenshot.png",
+    "softwareVersion": "1.0",
+    "author": {
+      "@type": "Organization",
+      "name": "USCIS Case Tracker Team"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "1"
+    }
+  }
+  </script>
+
+  <!-- Structured Data for FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "How do I track my USCIS case status?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To track your USCIS case: 1) Add your receipt number to the tracker, 2) Log in to myaccount.uscis.gov, 3) Click 'Open API tabs' to get your case data, 4) Paste the JSON into the tracker. Your timeline will update automatically with all case history."
+      }
+    },{
+      "@type": "Question",
+      "name": "Is the USCIS Case Tracker free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the USCIS Case Tracker is completely free and open source. There are no subscriptions, fees, or hidden costs. You can track unlimited cases forever at no charge."
+      }
+    },{
+      "@type": "Question",
+      "name": "Is my immigration data safe and private?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, your data is completely private. The USCIS Case Tracker runs 100% in your browser with zero data sent to any servers. All information is stored locally on your device using browser localStorage."
+      }
+    },{
+      "@type": "Question",
+      "name": "What USCIS forms can I track?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can track all USCIS forms including I-485 (Green Card), I-765 (Work Permit/EAD), I-131 (Travel Document/Advance Parole), I-140, I-130, N-400 (Citizenship), I-129 (H-1B), and all other USCIS case types."
+      }
+    }]
+  }
+  </script>
+
+  <!-- Structured Data for Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://humanstack.github.io/uscis-case-tracker/"
+    }]
+  }
+  </script>
   <style>
     /* Modern CSS Reset */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        :root {
+    :root {
       /* Modern color palette using HSL */
       --hue-primary: 222;  /* Deep blue */
       --hue-success: 142;  /* Emerald */
@@ -26,24 +157,27 @@
       --card: hsl(0 0% 100%);
       --border: hsl(var(--hue-primary) 15% 90%);
       --text: hsl(var(--hue-primary) 30% 12%);
-      --text-light: hsl(var(--hue-primary) 15% 35%);
-      --muted: hsl(var(--hue-primary) 10% 45%);
+      --text-light: hsl(var(--hue-primary) 15% 45%);
+      --muted: hsl(var(--hue-primary) 10% 55%);
 
       /* Accent colors */
       --accent: hsl(var(--hue-primary) 90% 50%);
-      --accent-light: hsl(var(--hue-primary) 90% 95%);
+      --accent-light: hsl(var(--hue-primary) 90% 96%);
       --accent-hover: hsl(var(--hue-primary) 85% 45%);
-      --accent-border: hsl(var(--hue-primary) 90% 88%);
+      --accent-border: hsl(var(--hue-primary) 90% 85%);
 
       /* Status colors */
       --success: hsl(var(--hue-success) 85% 40%);
-      --success-light: hsl(var(--hue-success) 85% 95%);
+      --success-light: hsl(var(--hue-success) 85% 96%);
+      --success-border: hsl(var(--hue-success) 60% 75%);
       --warning: hsl(var(--hue-warning) 95% 45%);
-      --warning-light: hsl(var(--hue-warning) 95% 95%);
+      --warning-light: hsl(var(--hue-warning) 95% 96%);
+      --warning-border: hsl(var(--hue-warning) 80% 70%);
       --error: hsl(var(--hue-error) 95% 45%);
-      --error-light: hsl(var(--hue-error) 95% 95%);
+      --error-light: hsl(var(--hue-error) 95% 96%);
+      --error-border: hsl(var(--hue-error) 80% 75%);
 
-      /* Spacing system - compact 4pt grid */
+      /* Spacing system - 4pt grid */
       --space-2xs: 0.125rem; /* 2px */
       --space-xs: 0.25rem;   /* 4px */
       --space-sm: 0.5rem;    /* 8px */
@@ -51,88 +185,91 @@
       --space-lg: 1rem;      /* 16px */
       --space-xl: 1.5rem;    /* 24px */
       --space-2xl: 2rem;     /* 32px */
+      --space-3xl: 3rem;     /* 48px */
 
       /* Typography */
       --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
       --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      --line-height-tight: 1.2;
-      --line-height-normal: 1.5;
+      --line-height-tight: 1.25;
+      --line-height-normal: 1.6;
       --line-height-relaxed: 1.75;
 
       /* Shadows */
-      --shadow-sm: 0 1px 2px hsl(var(--hue-primary) 10% 20% / 0.05);
-      --shadow-md: 0 2px 4px hsl(var(--hue-primary) 10% 20% / 0.08);
-      --shadow-lg: 0 4px 6px hsl(var(--hue-primary) 10% 20% / 0.1);
-      --shadow-focus: 0 0 0 3px hsl(var(--hue-primary) 90% 50% / 0.2);
+      --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+      --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+      --shadow-focus: 0 0 0 3px hsl(var(--hue-primary) 90% 50% / 0.15);
 
       /* Animation */
-      --transition-fast: 0.15s ease-in-out;
-      --transition-normal: 0.25s ease-in-out;
+      --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
 
       /* Border radius */
       --radius-sm: 0.375rem;
       --radius-md: 0.5rem;
       --radius-lg: 0.75rem;
       --radius-xl: 1rem;
+      --radius-2xl: 1.5rem;
       --radius-full: 9999px;
-
-      /* Typography */
-      --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-      --line-height: 1.6;
-
-      /* Transitions */
-      --transition: 0.2s ease-in-out;
-
-      /* Shadows */
-      --shadow-sm: 0 1px 2px hsl(var(--hue-primary) 10% 20% / 0.05);
-      --shadow-md: 0 2px 4px hsl(var(--hue-primary) 10% 20% / 0.08);
-      --shadow-lg: 0 4px 6px hsl(var(--hue-primary) 10% 20% / 0.1);
     }
 
-        body {
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
       font-family: var(--font-sans);
       line-height: var(--line-height-normal);
       background: var(--bg);
       color: var(--text);
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
     }
 
     header {
-      background: var(--accent);
-      background-image: linear-gradient(120deg, var(--accent), hsl(var(--hue-primary) 85% 45%));
+      background: linear-gradient(135deg, hsl(var(--hue-primary) 95% 55%) 0%, hsl(var(--hue-primary) 85% 48%) 100%);
       color: white;
-      padding: var(--space-lg) var(--space-md);
+      padding: var(--space-2xl) var(--space-lg);
       text-align: center;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
       box-shadow: var(--shadow-lg);
+      backdrop-filter: blur(10px);
+      transition: padding var(--transition-normal);
     }
 
     header h1 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      letter-spacing: -0.025em;
-      margin-bottom: var(--space-2xs);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-sm);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     header p {
-      font-size: 1rem;
-      color: hsl(var(--hue-primary) 90% 90%);
-      max-width: 24rem;
-      margin: 0 auto;
+      font-size: 0.9375rem;
+      color: rgba(255, 255, 255, 0.95);
+      max-width: 32rem;
+      margin: 0 auto var(--space-md);
+      font-weight: 500;
+      line-height: var(--line-height-relaxed);
     }
 
     main {
-      max-width: 64rem;
-      margin: var(--space-lg) auto;
-      padding: 0 var(--space-md);
+      max-width: 68rem;
+      margin: 0 auto;
+      padding: var(--space-2xl) var(--space-lg) var(--space-3xl);
     }
 
     .card {
       background: var(--card);
-      border-radius: var(--radius-lg);
-      margin-bottom: var(--space-lg);
+      border-radius: var(--radius-xl);
+      margin-bottom: var(--space-2xl);
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border);
       transition: all var(--transition-normal);
@@ -144,14 +281,18 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: var(--space-sm);
-      padding: var(--space-md) var(--space-lg);
+      gap: var(--space-md);
+      padding: var(--space-xl);
       border-bottom: 1px solid var(--border);
-      background: var(--bg);
+      background: linear-gradient(to bottom, hsl(var(--hue-primary) 20% 98%), var(--card));
     }
 
-    .card > *:not(.card-header) {
-      padding: var(--space-lg);
+    .card-header h2 {
+      margin: 0;
+    }
+
+    .card > *:not(.card-header):not(.card-body):not(.collapsed-content) {
+      padding: var(--space-xl);
     }
 
     .export-btn {
@@ -159,18 +300,21 @@
       color: var(--accent);
       border: 1px solid var(--accent-border);
       font-size: 0.875rem;
-      padding: var(--space-xs) var(--space-md);
+      padding: var(--space-sm) var(--space-lg);
+      font-weight: 600;
+      transition: all var(--transition-normal);
     }
 
     .export-btn:hover {
       background: var(--accent);
       color: white;
       border-color: var(--accent);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
     }
 
     .card:hover {
       box-shadow: var(--shadow-md);
-      border-color: var(--accent-border);
     }
 
     .card::before {
@@ -179,8 +323,8 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, var(--accent), hsl(var(--hue-primary) 85% 45%));
+      height: 3px;
+      background: linear-gradient(90deg, hsl(var(--hue-primary) 95% 55%), hsl(var(--hue-primary) 85% 48%));
       opacity: 0;
       transition: opacity var(--transition-normal);
     }
@@ -193,31 +337,45 @@
     .card.collapsible .card-header {
       cursor: pointer;
       user-select: none;
-      transition: background-color var(--transition-normal);
+      transition: all var(--transition-normal);
     }
 
     .card.collapsible .card-header:hover {
-      background: var(--accent-light);
+      background: linear-gradient(to bottom, var(--accent-light), hsl(var(--hue-primary) 95% 98%));
+    }
+
+    .card.collapsible .card-header:active {
+      transform: scale(0.995);
     }
 
     .card.collapsible .card-body {
       overflow: hidden;
-      transition: max-height var(--transition-normal) ease-out, padding var(--transition-normal) ease-out;
+      transition: max-height var(--transition-slow) cubic-bezier(0.4, 0, 0.2, 1),
+                  padding var(--transition-slow) cubic-bezier(0.4, 0, 0.2, 1),
+                  opacity var(--transition-normal);
     }
 
     .card.collapsible.collapsed .card-body {
-      max-height: 0;
-      padding: 0 var(--space-lg);
+      max-height: 0 !important;
+      padding: 0 var(--space-xl);
+      opacity: 0;
     }
 
     .card.collapsible:not(.collapsed) .card-body {
-      max-height: 1000px; /* Large enough to accommodate content */
-      padding: var(--space-lg);
+      max-height: 2000px;
+      padding: var(--space-xl);
+      opacity: 1;
     }
 
     .collapse-icon {
-      transition: transform var(--transition-normal);
+      transition: transform var(--transition-normal), color var(--transition-normal);
       margin-left: auto;
+      color: var(--text-light);
+      flex-shrink: 0;
+    }
+
+    .card.collapsible .card-header:hover .collapse-icon {
+      color: var(--accent);
     }
 
     .card.collapsible.collapsed .collapse-icon {
@@ -227,119 +385,166 @@
     /* Collapsed quick links */
     .collapsed-content {
       display: none;
-      padding: var(--space-sm) var(--space-lg) var(--space-md);
+      padding: var(--space-md) var(--space-xl);
       border-top: 1px solid var(--border);
-      background: var(--bg);
+      background: linear-gradient(to bottom, var(--card), hsl(var(--hue-primary) 20% 99%));
+      animation: fadeIn var(--transition-normal);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-4px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .card.collapsible.collapsed .collapsed-content {
       display: flex;
       align-items: center;
-      gap: var(--space-md);
+      gap: var(--space-sm);
       flex-wrap: wrap;
     }
 
     .quick-link {
       display: inline-flex;
       align-items: center;
-      gap: var(--space-xs);
-      padding: var(--space-xs) var(--space-sm);
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-lg);
       background: white;
       color: var(--accent);
       text-decoration: none;
       border: 1px solid var(--accent-border);
       border-radius: var(--radius-full);
       font-size: 0.875rem;
-      font-weight: 500;
+      font-weight: 600;
       transition: all var(--transition-normal);
+      white-space: nowrap;
     }
 
     .quick-link:hover {
-      background: var(--accent-light);
+      background: var(--accent);
+      color: white;
       border-color: var(--accent);
-      transform: translateY(-1px);
-      box-shadow: var(--shadow-sm);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .quick-link:active {
+      transform: translateY(0);
     }
 
     .quick-link .icon {
-      width: 1em;
-      height: 1em;
+      width: 1.125em;
+      height: 1.125em;
       margin: 0;
     }
 
-    h2, h3 {
+    h2 {
+      color: var(--text);
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      line-height: var(--line-height-tight);
+    }
+
+    h3 {
       color: var(--text);
       font-weight: 600;
-      letter-spacing: -0.025em;
-      margin-bottom: var(--space-lg);
+      font-size: 1.25rem;
+      letter-spacing: -0.015em;
       line-height: var(--line-height-tight);
     }
 
     .input-group {
-      margin-bottom: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--text);
+      margin-bottom: var(--space-sm);
     }
 
     input, textarea {
       width: 100%;
-      padding: var(--space-md);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
+      padding: var(--space-md) var(--space-lg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
       font: inherit;
+      font-size: 0.9375rem;
       color: var(--text);
       background: white;
       transition: all var(--transition-normal);
     }
 
+    input::placeholder, textarea::placeholder {
+      color: var(--muted);
+    }
+
     input:hover, textarea:hover {
-      border-color: var(--accent-border);
+      border-color: hsl(var(--hue-primary) 60% 80%);
     }
 
     input:focus, textarea:focus {
       outline: none;
       border-color: var(--accent);
       box-shadow: var(--shadow-focus);
+      background: white;
     }
 
     .hint {
-      font-size: 0.875rem;
+      font-size: 0.8125rem;
       color: var(--text-light);
-      margin-top: var(--space-xs);
+      margin-top: var(--space-sm);
+      line-height: var(--line-height-normal);
     }
 
     button {
       cursor: pointer;
-      padding: var(--space-sm) var(--space-lg);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border);
+      padding: var(--space-md) var(--space-xl);
+      border-radius: var(--radius-lg);
+      border: 1.5px solid var(--border);
       background: white;
       font: inherit;
-      font-weight: 500;
+      font-size: 0.9375rem;
+      font-weight: 600;
       color: var(--text);
       transition: all var(--transition-normal);
       margin-right: var(--space-sm);
       display: inline-flex;
       align-items: center;
-      gap: var(--space-xs);
+      justify-content: center;
+      gap: var(--space-sm);
+      position: relative;
     }
 
     button.primary {
-      background: var(--accent);
+      background: linear-gradient(135deg, hsl(var(--hue-primary) 95% 55%) 0%, hsl(var(--hue-primary) 85% 48%) 100%);
       color: white;
       border: none;
+      box-shadow: var(--shadow-sm);
     }
 
     button:hover {
-      transform: translateY(-1px);
+      transform: translateY(-2px);
       box-shadow: var(--shadow-md);
-      border-color: var(--accent-border);
+      border-color: hsl(var(--hue-primary) 60% 75%);
     }
 
     button.primary:hover {
-      background: var(--accent-hover);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
     }
 
     button:active {
       transform: translateY(0);
+      box-shadow: var(--shadow-sm);
     }
 
     button:focus-visible {
@@ -347,49 +552,67 @@
       box-shadow: var(--shadow-focus);
     }
 
-    button.primary:hover {
-      background: var(--accent-hover);
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
     }
 
-        .chip-container {
+    .chip-container {
       display: flex;
       flex-wrap: wrap;
-      gap: var(--space-xs);
-      min-height: 2.5rem;
-      padding: var(--space-sm);
-      background: var(--bg);
+      gap: var(--space-sm);
+      min-height: 3rem;
+      padding: var(--space-md);
+      background: linear-gradient(to bottom, hsl(var(--hue-primary) 20% 99%), hsl(var(--hue-primary) 20% 97%));
       border-radius: var(--radius-lg);
-      margin-top: var(--space-md);
+      border: 1px solid var(--border);
+    }
+
+    .chip-container:empty::after {
+      content: 'No receipts added yet';
+      color: var(--muted);
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
     }
 
     .chip {
       display: inline-flex;
       align-items: center;
       background: white;
-      border: 1px solid var(--border);
+      border: 1.5px solid var(--border);
       border-radius: var(--radius-full);
-      padding: var(--space-xs) var(--space-lg) var(--space-xs) var(--space-sm);
+      padding: var(--space-sm) var(--space-lg) var(--space-sm) var(--space-md);
       font-size: 0.875rem;
+      font-weight: 600;
       color: var(--text);
       position: relative;
       transition: all var(--transition-normal);
-      gap: var(--space-xs);
+      gap: var(--space-sm);
+      box-shadow: var(--shadow-xs);
     }
 
     .chip:hover {
-      border-color: var(--accent-border);
+      border-color: var(--accent);
       box-shadow: var(--shadow-sm);
       transform: translateY(-1px);
     }
 
     .chip-delete {
-      padding: var(--space-2xs);
+      padding: var(--space-xs);
       margin: 0;
+      margin-left: var(--space-xs);
       border: none;
       background: transparent;
       color: var(--text-light);
-      border-radius: 50%;
-      transition: all var(--transition-normal);
+      border-radius: var(--radius-full);
+      transition: all var(--transition-fast);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .chip-delete:hover {
@@ -400,13 +623,13 @@
     }
 
     .chip-delete .icon {
-      width: 1rem;
-      height: 1rem;
+      width: 0.875rem;
+      height: 0.875rem;
       margin: 0;
     }
 
-    .success {
-      background: var(--success);
+    button.success {
+      background: linear-gradient(135deg, hsl(var(--hue-success) 85% 50%) 0%, hsl(var(--hue-success) 75% 42%) 100%);
       color: white;
       transform: translateY(0);
     }
@@ -419,44 +642,60 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: hsl(var(--hue-primary) 30% 12% / 0.8);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      z-index: 100;
-      padding: var(--space-lg);
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1000;
+      padding: var(--space-xl);
       overflow-y: auto;
+      animation: fadeIn var(--transition-fast);
     }
 
     .modal-content {
       background: var(--card);
-      border-radius: var(--radius-xl);
-      max-width: 48rem;
-      margin: var(--space-xl) auto;
+      border-radius: var(--radius-2xl);
+      max-width: 52rem;
+      margin: var(--space-2xl) auto;
       position: relative;
       overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      animation: slideUp var(--transition-normal);
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
 
     .modal-header {
       display: flex;
       align-items: center;
       gap: var(--space-lg);
-      padding: var(--space-lg);
+      padding: var(--space-xl);
       border-bottom: 1px solid var(--border);
-      background: var(--bg);
+      background: linear-gradient(to bottom, hsl(var(--hue-primary) 20% 98%), var(--card));
     }
 
     .modal-header h3 {
       margin: 0;
-      font-size: 1.25rem;
+      font-size: 1.375rem;
+      font-weight: 700;
     }
 
     .modal-close {
       margin-left: auto;
-      padding: var(--space-xs);
+      padding: var(--space-sm);
       color: var(--text-light);
       border: none;
       background: transparent;
-      border-radius: 50%;
+      border-radius: var(--radius-full);
+      flex-shrink: 0;
     }
 
     .modal-close:hover {
@@ -469,82 +708,96 @@
     .modal-tabs {
       display: flex;
       gap: var(--space-xs);
+      background: hsl(var(--hue-primary) 20% 96%);
+      padding: var(--space-xs);
+      border-radius: var(--radius-lg);
     }
 
     .tab-btn {
       background: transparent;
       border: none;
-      padding: var(--space-xs) var(--space-sm);
+      padding: var(--space-sm) var(--space-lg);
       color: var(--text-light);
       font-size: 0.875rem;
-      border-radius: var(--radius-sm);
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      transition: all var(--transition-fast);
     }
 
     .tab-btn:hover {
-      background: var(--border);
+      background: white;
+      color: var(--text);
       transform: none;
       box-shadow: none;
     }
 
     .tab-btn.active {
-      background: var(--accent-light);
+      background: white;
       color: var(--accent);
-      font-weight: 500;
+      box-shadow: var(--shadow-xs);
     }
 
     .tab-content {
       display: none;
-      padding: var(--space-lg);
+      padding: var(--space-xl);
     }
 
     .tab-content.active {
       display: block;
+      animation: fadeIn var(--transition-fast);
     }
 
     .json-viewer, .diff-viewer {
-      background: var(--bg);
-      padding: var(--space-md);
-      border-radius: var(--radius-md);
+      background: hsl(var(--hue-primary) 20% 97%);
+      padding: var(--space-lg);
+      border-radius: var(--radius-lg);
       font-family: var(--font-mono);
-      font-size: 0.875rem;
-      line-height: 1.5;
+      font-size: 0.8125rem;
+      line-height: 1.6;
       tab-size: 2;
       white-space: pre-wrap;
       overflow-x: auto;
+      border: 1px solid var(--border);
     }
 
     .diff-item {
-      padding: var(--space-sm);
-      margin: var(--space-xs) 0;
+      padding: var(--space-md);
+      margin: var(--space-sm) 0;
       border-radius: var(--radius-md);
       overflow: hidden;
+      border: 1px solid transparent;
     }
 
     .diff-added {
       background: var(--success-light);
       border-left: 3px solid var(--success);
+      border-color: var(--success-border);
     }
 
     .diff-removed {
       background: var(--error-light);
       border-left: 3px solid var(--error);
+      border-color: var(--error-border);
     }
 
     .diff-changed {
       background: var(--warning-light);
       border-left: 3px solid var(--warning);
+      border-color: var(--warning-border);
     }
 
     .diff-path {
-      font-weight: 500;
+      font-weight: 600;
       color: var(--text);
-      margin-bottom: var(--space-xs);
+      margin-bottom: var(--space-sm);
+      font-size: 0.875rem;
     }
 
     .diff-value {
       color: var(--text-light);
       font-family: var(--font-mono);
       font-size: 0.8125rem;
+      line-height: 1.5;
     }
 
     .export-info {
@@ -554,11 +807,11 @@
     }
 
     .export-preview {
-      background: var(--bg);
-      padding: var(--space-md);
-      border-radius: var(--radius-md);
+      background: hsl(var(--hue-primary) 20% 97%);
+      padding: var(--space-lg);
+      border-radius: var(--radius-lg);
       font-family: var(--font-mono);
-      font-size: 0.875rem;
+      font-size: 0.8125rem;
       line-height: 1.6;
       white-space: pre-wrap;
       overflow-x: auto;
@@ -566,82 +819,335 @@
     }
 
     .modal-body {
-      padding: var(--space-lg);
+      padding: var(--space-xl);
     }
 
     .modal-actions {
       display: flex;
-      gap: var(--space-xs);
+      gap: var(--space-sm);
       margin-left: auto;
+    }
+
+    /* Step indicators and progress */
+    .step-indicator {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: var(--radius-full);
+      background: var(--accent-light);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.875rem;
+      margin-right: var(--space-md);
+      flex-shrink: 0;
+      border: 2px solid var(--accent-border);
+    }
+
+    .step-indicator.completed {
+      background: var(--success);
+      color: white;
+      border-color: var(--success);
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Empty states */
+    .empty-state {
+      text-align: center;
+      padding: var(--space-3xl) var(--space-xl);
+      color: var(--text-light);
+    }
+
+    .empty-state-icon {
+      width: 4rem;
+      height: 4rem;
+      margin: 0 auto var(--space-lg);
+      opacity: 0.3;
+    }
+
+    .empty-state-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: var(--space-sm);
+    }
+
+    .empty-state-description {
+      font-size: 0.9375rem;
+      line-height: var(--line-height-relaxed);
+      max-width: 28rem;
+      margin: 0 auto var(--space-xl);
+    }
+
+    /* Guided flow helpers */
+    .helper-callout {
+      background: linear-gradient(135deg, var(--accent-light), hsl(var(--hue-primary) 90% 98%));
+      border: 1.5px solid var(--accent-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-xl);
+      display: flex;
+      gap: var(--space-md);
+      align-items: flex-start;
+    }
+
+    .helper-callout-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .helper-callout-content {
+      flex: 1;
+    }
+
+    .helper-callout-title {
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: var(--space-xs);
+      font-size: 0.9375rem;
+    }
+
+    .helper-callout-text {
+      color: var(--text-light);
+      font-size: 0.875rem;
+      line-height: var(--line-height-relaxed);
+    }
+
+    .helper-callout ol {
+      margin: var(--space-sm) 0 0 var(--space-lg);
+      color: var(--text-light);
+      font-size: 0.875rem;
+      line-height: var(--line-height-relaxed);
+    }
+
+    .helper-callout ol li {
+      margin-bottom: var(--space-xs);
+    }
+
+    /* Case summary cards */
+    .case-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--space-lg);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .case-card {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      transition: all var(--transition-normal);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .case-card:hover {
+      border-color: var(--accent-border);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .case-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: var(--space-md);
+    }
+
+    .case-card-receipt {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .case-card-form {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-light);
+      background: var(--bg);
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-full);
+    }
+
+    .case-card-status {
+      font-size: 0.875rem;
+      color: var(--text-light);
+      margin-bottom: var(--space-sm);
+      line-height: var(--line-height-relaxed);
+    }
+
+    .case-card-meta {
+      display: flex;
+      gap: var(--space-lg);
+      font-size: 0.8125rem;
+      color: var(--muted);
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--border);
+    }
+
+    .case-card-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2xs);
+    }
+
+    .case-card-meta-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    .case-card-meta-value {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .status-badge.active {
+      background: var(--warning-light);
+      color: var(--warning);
+      border: 1px solid var(--warning-border);
+    }
+
+    .status-badge.completed {
+      background: var(--success-light);
+      color: var(--success);
+      border: 1px solid var(--success-border);
     }
 
     .timeline {
       position: relative;
-      border-left: 2px solid var(--accent-border);
-      margin: var(--space-md) 0 0 var(--space-sm);
-      padding-left: var(--space-lg);
+      border-left: 3px solid var(--accent-border);
+      margin: var(--space-lg) 0 0 var(--space-md);
+      padding-left: var(--space-2xl);
     }
 
     .timeline::before {
       content: '';
       position: absolute;
-      top: -8px;
-      left: -8px;
-      width: 14px;
-      height: 14px;
+      top: -10px;
+      left: -10px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
-      background: var(--accent);
-      border: 2px solid white;
-      box-shadow: var(--shadow-sm);
+      background: linear-gradient(135deg, hsl(var(--hue-primary) 95% 55%), hsl(var(--hue-primary) 85% 48%));
+      border: 3px solid white;
+      box-shadow: var(--shadow-md);
+      z-index: 2;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -1.5px;
+      width: 3px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--accent-border), transparent);
     }
 
     .tgroup {
-      margin-bottom: var(--space-xl);
+      margin-bottom: var(--space-2xl);
       position: relative;
     }
 
     .tgroup::before {
       content: '';
       position: absolute;
-      top: 12px;
-      left: calc(-1 * var(--space-xl) - 5px);
-      width: 8px;
-      height: 8px;
+      top: 14px;
+      left: calc(-1 * var(--space-2xl) - 6.5px);
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
-      background: var(--accent-border);
+      background: white;
+      border: 3px solid var(--accent);
+      box-shadow: var(--shadow-sm);
+      z-index: 1;
     }
 
     .tdate {
-      font-weight: 600;
-      margin-bottom: var(--space-md);
+      font-weight: 700;
+      margin-bottom: var(--space-lg);
       color: var(--text);
-      font-size: 0.875rem;
+      font-size: 0.9375rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .tdate::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(to right, var(--border), transparent);
     }
 
     .titem {
-      margin: var(--space-xs) 0;
-      padding: var(--space-sm) var(--space-md);
+      margin: var(--space-sm) 0;
+      padding: var(--space-lg);
       background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
       font-size: 0.9375rem;
       transition: all var(--transition-normal);
       position: relative;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .titem::before {
+      content: '';
+      position: absolute;
+      left: -25px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--border);
+      transition: all var(--transition-normal);
     }
 
     .titem:hover {
-      border-color: var(--accent-border);
+      border-color: var(--accent);
       box-shadow: var(--shadow-md);
-      transform: translateY(-1px) translateX(2px);
+      transform: translateX(4px);
+    }
+
+    .titem:hover::before {
+      background: var(--accent);
+      width: 8px;
+      height: 8px;
+      left: -26px;
     }
 
     .titem-content {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      gap: var(--space-md);
+      align-items: flex-start;
+      gap: var(--space-lg);
     }
 
     .titem-content > div:first-child {
@@ -649,223 +1155,108 @@
       min-width: 0;
     }
 
+    .titem-time {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: var(--space-xs);
+    }
+
     .view-json {
-      padding: var(--space-xs) var(--space-sm);
-      font-size: 0.75rem;
+      padding: var(--space-sm) var(--space-lg);
+      font-size: 0.8125rem;
+      font-weight: 600;
       color: var(--text-light);
       background: var(--bg);
-      border: 1px solid var(--border);
+      border: 1.5px solid var(--border);
       border-radius: var(--radius-full);
-      opacity: 0.8;
       white-space: nowrap;
       flex-shrink: 0;
+      transition: all var(--transition-normal);
     }
 
     .view-json:hover {
       color: var(--accent);
-      border-color: var(--accent-border);
+      border-color: var(--accent);
       background: var(--accent-light);
-      opacity: 1;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
     }
 
     .view-json .icon {
       width: 1em;
       height: 1em;
-      margin-right: var(--space-2xs);
+      margin: 0;
     }
 
     .titem-main {
       display: flex;
       align-items: center;
-      gap: var(--space-xs);
+      gap: var(--space-sm);
       flex-wrap: wrap;
+      margin-bottom: var(--space-xs);
+    }
+
+    .titem-label {
+      font-weight: 500;
+      color: var(--text);
+      line-height: var(--line-height-relaxed);
     }
 
     .flag {
       display: inline-flex;
       align-items: center;
-      gap: var(--space-2xs);
+      gap: var(--space-xs);
       font-size: 0.75rem;
-      font-weight: 500;
-      padding: var(--space-2xs) var(--space-xs);
+      font-weight: 700;
+      padding: var(--space-xs) var(--space-sm);
       border-radius: var(--radius-full);
       white-space: nowrap;
+      border: 1px solid transparent;
     }
 
     .flag.system {
       color: var(--warning);
       background: var(--warning-light);
+      border-color: var(--warning-border);
     }
 
     .flag.officer {
       color: var(--success);
       background: var(--success-light);
+      border-color: var(--success-border);
     }
 
     .flag.completed {
       color: var(--accent);
       background: var(--accent-light);
-      font-weight: 600;
+      border-color: var(--accent-border);
     }
 
     .insight {
-      margin-top: var(--space-xs);
+      margin-top: var(--space-sm);
       font-size: 0.875rem;
-      padding: var(--space-xs) var(--space-sm);
-      border-radius: var(--radius-sm);
-      background: var(--bg);
+      padding: var(--space-md);
+      border-radius: var(--radius-md);
+      line-height: var(--line-height-relaxed);
     }
 
     .insight.info {
       color: var(--text-light);
-      border-left: 2px solid var(--accent-border);
+      background: hsl(var(--hue-primary) 20% 97%);
+      border-left: 3px solid var(--accent-border);
     }
 
     .insight.success {
       color: var(--success);
       background: var(--success-light);
-      border-left: 2px solid var(--success);
-    }
-
-    /* Modal styles */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 100;
-      padding: var(--space-lg);
-      overflow-y: auto;
-    }
-
-    .modal-content {
-      background: var(--card);
-      border-radius: 0.75rem;
-      max-width: 48rem;
-      margin: var(--space-xl) auto;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .modal-header {
-      padding: var(--space-md) var(--space-lg);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: var(--space-lg);
-    }
-
-    .modal-tabs {
-      display: flex;
-      gap: var(--space-xs);
-    }
-
-    .tab-btn {
-      background: transparent;
-      border: none;
-      padding: var(--space-xs) var(--space-sm);
-      color: var(--muted);
-      border-radius: 0.375rem;
-      font-size: 0.875rem;
-    }
-
-    .tab-btn:hover {
-      background: var(--bg);
-      transform: none;
-      box-shadow: none;
-    }
-
-    .tab-btn.active {
-      background: var(--bg);
-      color: var(--accent);
+      border-left: 3px solid var(--success);
       font-weight: 500;
-    }
-
-    .modal-close {
-      margin-left: auto;
-      padding: var(--space-xs);
-      background: transparent;
-      border: none;
-      color: var(--muted);
-    }
-
-    .modal-close:hover {
-      color: var(--text);
-      transform: none;
-      box-shadow: none;
-    }
-
-    .tab-content {
-      display: none;
-      padding: var(--space-lg);
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-    .json-viewer, .diff-viewer {
-      background: var(--bg);
-      padding: var(--space-md);
-      border-radius: 0.5rem;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 0.875rem;
-      white-space: pre-wrap;
-      overflow-x: auto;
-    }
-
-    .diff-item {
-      padding: var(--space-xs) var(--space-sm);
-      margin: var(--space-xs) 0;
-      border-radius: 0.25rem;
-    }
-
-    .diff-added {
-      background: hsl(142, 76%, 95%);
-      border-left: 3px solid hsl(142, 76%, 36%);
-    }
-
-    .diff-removed {
-      background: hsl(0, 90%, 95%);
-      border-left: 3px solid hsl(0, 90%, 60%);
-    }
-
-    .diff-changed {
-      background: hsl(var(--hue-warning), 90%, 95%);
-      border-left: 3px solid var(--warn);
-    }
-
-    .diff-path {
-      font-weight: 500;
-      color: var(--text);
-    }
-
-    .diff-value {
-      color: var(--muted);
-      margin-top: var(--space-xs);
     }
 
     .muted {
       color: var(--muted);
       font-size: 0.875rem;
-    }
-
-    .flag {
-      color: var(--warn);
-      font-weight: 600;
-      margin-left: var(--space-sm);
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-xs);
-    }
-
-    .flag::before {
-      content: "⚙";
-      font-size: 1rem;
     }
 
     /* Additional modern styles */
@@ -881,102 +1272,60 @@
       border: 0;
     }
 
-    .input-group {
-      position: relative;
-      margin-bottom: var(--space-lg);
-    }
-
-    .hint {
-      display: block;
-      color: var(--muted);
-      font-size: 0.875rem;
-      margin-top: calc(var(--space-xs) * -1);
-    }
-
     .button-group {
       display: flex;
       gap: var(--space-sm);
-      margin-bottom: var(--space-md);
       flex-wrap: wrap;
     }
 
     .icon {
       width: 1.25em;
       height: 1.25em;
-      margin-right: var(--space-xs);
-      vertical-align: -0.125em;
-    }
-
-    button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: var(--space-xs);
-    }
-
-    .chip-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-xs);
-      min-height: 2.5rem;
-    }
-
-    header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--space-xs);
-    }
-
-    header h1 {
-      font-size: 1.75rem;
-      font-weight: 600;
-    }
-
-    header p {
-      font-size: 0.9375rem;
-      color: white;
-      margin: var(--space-xs) auto var(--space-sm);
-      letter-spacing: -0.01em;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-      font-weight: 500;
+      flex-shrink: 0;
     }
 
     .privacy-badge {
       display: inline-flex;
       align-items: center;
-      gap: var(--space-xs);
-      padding: var(--space-xs) var(--space-sm);
-      background: hsl(var(--hue-primary) 90% 95% / 0.2);
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-lg);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
       color: white;
       border-radius: var(--radius-full);
       font-size: 0.875rem;
-      font-weight: 500;
-      margin-bottom: var(--space-md);
+      font-weight: 600;
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .privacy-badge .icon {
-      width: 1.25em;
-      height: 1.25em;
-      color: hsl(var(--hue-primary) 90% 90%);
+      width: 1.125em;
+      height: 1.125em;
+      color: white;
     }
 
     .github-link {
       display: inline-flex;
       align-items: center;
-      gap: var(--space-xs);
-      padding: var(--space-sm) var(--space-md);
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-lg);
       background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
       color: white;
       text-decoration: none;
-      border-radius: 9999px;
+      border-radius: var(--radius-full);
       font-size: 0.875rem;
-      transition: all var(--transition);
+      font-weight: 600;
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
+      transition: all var(--transition-normal);
     }
 
     .github-link:hover {
       background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-1px);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     }
 
     .github-link:active {
@@ -984,8 +1333,117 @@
     }
 
     .github-icon {
-      width: 1.25em;
-      height: 1.25em;
+      width: 1.125em;
+      height: 1.125em;
+    }
+
+    /* Floating Action Button */
+    .fab {
+      position: fixed;
+      bottom: var(--space-2xl);
+      right: var(--space-2xl);
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, hsl(var(--hue-primary) 95% 55%) 0%, hsl(var(--hue-primary) 85% 48%) 100%);
+      color: white;
+      border: none;
+      box-shadow: var(--shadow-lg);
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-normal);
+      z-index: 50;
+      margin: 0;
+      padding: 0;
+    }
+
+    .fab.visible {
+      display: flex;
+    }
+
+    .fab:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .fab:active {
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    .fab .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: 0;
+    }
+
+    /* Quick stats bar */
+    .quick-stats {
+      display: flex;
+      gap: var(--space-lg);
+      padding: var(--space-lg) var(--space-xl);
+      background: linear-gradient(to bottom, hsl(var(--hue-primary) 20% 99%), white);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .quick-stats-items {
+      display: flex;
+      gap: var(--space-2xl);
+      flex-wrap: wrap;
+    }
+
+    .quick-stat {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2xs);
+    }
+
+    .quick-stat-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    .quick-stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1;
+    }
+
+    .quick-stats-actions {
+      display: flex;
+      gap: var(--space-sm);
+    }
+
+    .btn-compact {
+      padding: var(--space-sm) var(--space-lg);
+      font-size: 0.875rem;
+    }
+
+    /* Add case modal */
+    #addCaseModal .modal-content {
+      max-width: 36rem;
+    }
+
+    .add-case-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .form-actions {
+      display: flex;
+      gap: var(--space-sm);
+      justify-content: flex-end;
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--border);
     }
 
     /* Focus styles */
@@ -1003,39 +1461,289 @@
       box-shadow: 0 0 0 3px hsl(0, 90%, 50% / 0.2);
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       :root {
-        --space-lg: 1rem;
-        --space-xl: 1.5rem;
+        --space-lg: 0.875rem;
+        --space-xl: 1.25rem;
+        --space-2xl: 1.5rem;
+        --space-3xl: 2rem;
       }
 
-      body {
-        font-size: 0.9375rem;
+      header {
+        padding: var(--space-xl) var(--space-md);
       }
 
-      header h2 {
-        font-size: 1.25rem;
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      main {
+        padding: var(--space-xl) var(--space-md) var(--space-2xl);
       }
 
       .card {
-        padding: var(--space-md);
-        border-radius: 0.75rem;
+        border-radius: var(--radius-lg);
+        margin-bottom: var(--space-xl);
       }
+
+      .card-header {
+        padding: var(--space-lg);
+        flex-wrap: wrap;
+      }
+
+      .card > *:not(.card-header):not(.card-body):not(.collapsed-content) {
+        padding: var(--space-lg);
+      }
+
+      .card.collapsible:not(.collapsed) .card-body {
+        padding: var(--space-lg);
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      h3 {
+        font-size: 1.125rem;
+      }
+
+      .step-indicator {
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-right: var(--space-sm);
+        font-size: 0.8125rem;
+      }
+
+      .button-group {
+        flex-direction: column;
+      }
+
+      .button-group button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: var(--space-sm);
+      }
+
+      button {
+        padding: var(--space-md) var(--space-lg);
+      }
+
+      .titem {
+        padding: var(--space-md);
+      }
+
+      .titem-content {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .view-json {
+        width: 100%;
+        justify-content: center;
+        margin-top: var(--space-md);
+      }
+
+      .titem-main {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .timeline {
+        padding-left: var(--space-xl);
+        margin-left: var(--space-sm);
+      }
+
+      .modal {
+        padding: var(--space-md);
+      }
+
+      .modal-content {
+        margin: var(--space-md) auto;
+        border-radius: var(--radius-xl);
+      }
+
+      .modal-header {
+        padding: var(--space-lg);
+        flex-wrap: wrap;
+      }
+
+      .modal-tabs {
+        order: 3;
+        width: 100%;
+        margin-top: var(--space-sm);
+      }
+
+      .tab-content {
+        padding: var(--space-lg);
+      }
+
+      .case-summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .helper-callout {
+        flex-direction: column;
+      }
+
+      .privacy-badge {
+        font-size: 0.8125rem;
+      }
+
+      .github-link {
+        font-size: 0.8125rem;
+        padding: var(--space-sm) var(--space-md);
+      }
+
+      .quick-stats {
+        padding: var(--space-md);
+        flex-direction: column;
+        gap: var(--space-md);
+      }
+
+      .quick-stats-items {
+        gap: var(--space-lg);
+        width: 100%;
+      }
+
+      .quick-stats-actions {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .quick-stats-actions button {
+        width: 100%;
+      }
+
+      .fab {
+        bottom: var(--space-xl);
+        right: var(--space-lg);
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.375rem;
+      }
+
+      header p {
+        font-size: 0.875rem;
+      }
+
+      .chip-container {
+        padding: var(--space-sm);
+      }
+
+      .chip {
+        font-size: 0.8125rem;
+        padding: var(--space-xs) var(--space-md) var(--space-xs) var(--space-sm);
+      }
+
+      .tdate {
+        font-size: 0.8125rem;
+      }
+
+      .flag {
+        font-size: 0.6875rem;
+        padding: var(--space-2xs) var(--space-sm);
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Footer styles */
+    footer {
+      background: linear-gradient(to bottom, var(--card), hsl(var(--hue-primary) 20% 98%));
+      border-top: 2px solid var(--border);
+      padding: var(--space-3xl) var(--space-lg) var(--space-2xl);
+      margin-top: var(--space-3xl);
+    }
+
+    .footer-content {
+      max-width: 68rem;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-2xl);
+    }
+
+    .footer-section h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: var(--space-md);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-section p, .footer-section ul {
+      font-size: 0.875rem;
+      line-height: var(--line-height-relaxed);
+      color: var(--text-light);
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: var(--space-sm);
+    }
+
+    .footer-section a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    .footer-section a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      max-width: 68rem;
+      margin: var(--space-2xl) auto 0;
+      padding-top: var(--space-xl);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+
+    .footer-keywords {
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: var(--line-height-relaxed);
+      margin-top: var(--space-md);
+      opacity: 0.6;
+    }
+
+    .sr-only-seo {
+      position: absolute;
+      left: -10000px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
     }
   </style>
 </head>
-<body>
+<body itemscope itemtype="https://schema.org/WebApplication">
 <header>
-  <h1>USCIS Case Tracker</h1>
-  <p class="">100% client-side • Zero data sent to servers • All data stays in your browser</p>
-  <div class="privacy-badge">
-    <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  <h1 itemprop="name">USCIS Case Tracker - Free Privacy-Focused Immigration Status Tracker</h1>
+  <p itemprop="description">100% client-side • Zero data sent to servers • All data stays in your browser</p>
+  <div class="privacy-badge" role="status" aria-label="Privacy and security badge">
+    <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" role="img" alt="Security shield icon">
       <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"/>
     </svg>
     Private &amp; Secure
   </div>
-  <a href="https://github.com/humanstack/uscis-case-tracker" class="github-link" target="_blank" rel="noopener noreferrer" aria-label="View source code on GitHub">
-    <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+  <a href="https://github.com/humanstack/uscis-case-tracker" class="github-link" target="_blank" rel="noopener noreferrer" aria-label="View USCIS Case Tracker source code on GitHub" title="Open source USCIS immigration case tracker">
+    <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" role="img" alt="GitHub logo">
       <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
     </svg>
     View on GitHub
@@ -1045,7 +1753,7 @@
 <main>
   <section id="aboutSection" class="card collapsible" aria-labelledby="about-title">
     <div class="card-header" onclick="toggleCollapse('aboutSection')">
-      <h2 id="about-title">About / How To</h2>
+      <h2 id="about-title">Getting Started</h2>
       <svg class="collapse-icon icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
       </svg>
@@ -1053,27 +1761,40 @@
     <div class="collapsed-content">
       <a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener" class="quick-link">
         <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
+          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
         </svg>
         Login to USCIS
       </a>
     </div>
     <div class="card-body">
-      <p class="muted">
-        This is a fully client-side tracker. Your data stays in your browser — no servers.
-      </p>
+      <div class="helper-callout">
+        <svg class="helper-callout-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+        </svg>
+        <div class="helper-callout-content">
+          <div class="helper-callout-title">100% Privacy-Focused Tracker</div>
+          <div class="helper-callout-text">
+            Your data never leaves your browser. All case information is stored locally and no data is sent to any server.
+          </div>
+        </div>
+      </div>
       <ol>
-        <li>Log in to <a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener">myaccount.uscis.gov</a>.</li>
-        <li>Add your receipt numbers below.</li>
-        <li>Click <strong>Open API tabs</strong> to open the official JSON endpoints. Copy the raw JSON from each tab.</li>
-        <li>Paste the JSON here to save a snapshot. The timeline will update automatically.</li>
+        <li>First, log in to <a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener">myaccount.uscis.gov</a> in a separate tab</li>
+        <li>Add your USCIS receipt numbers below (e.g., IOE1234567890)</li>
+        <li>Click "Open API tabs" to open official USCIS JSON endpoints</li>
+        <li>Copy the raw JSON from each tab and paste it into Step 2</li>
+        <li>Your timeline will update automatically with each snapshot</li>
       </ol>
     </div>
   </section>
 
   <section id="receiptsSection" class="card collapsible" aria-labelledby="receipts-title">
     <div class="card-header" onclick="toggleCollapse('receiptsSection')">
-      <h2 id="receipts-title">Step 1: Manage Receipts</h2>
+      <div class="step-header">
+        <span class="step-indicator" id="step1Indicator">1</span>
+        <h2 id="receipts-title">Add Your Case Numbers</h2>
+      </div>
       <svg class="collapse-icon icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
       </svg>
@@ -1086,28 +1807,39 @@
         </svg>
         Open All API tabs
       </button>
-      <div id="receiptChipsCollapsed" class="chip-container" role="list" aria-label="Receipt numbers with individual API links"></div>
+      <div id="receiptChipsCollapsed" style="display: flex; flex-wrap: wrap; gap: var(--space-sm);" role="list" aria-label="Receipt numbers with individual API links"></div>
     </div>
     <div class="card-body">
+      <div class="helper-callout" id="step1Helper">
+        <svg class="helper-callout-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+        </svg>
+        <div class="helper-callout-content">
+          <div class="helper-callout-title">Start by adding your receipt number(s)</div>
+          <div class="helper-callout-text">
+            Enter your USCIS receipt number in the format: 3 letters + 10 digits (e.g., IOE1234567890). You can track multiple cases at once.
+          </div>
+        </div>
+      </div>
       <div class="input-group">
         <label for="receiptInput" class="sr-only">Receipt Number</label>
         <input
           id="receiptInput"
           type="text"
-          placeholder="Enter receipt number e.g. IOEXXXXXXXXXX"
+          placeholder="Enter receipt number e.g. IOE1234567890"
           pattern="[A-Z]{3}[0-9]{10}"
           aria-describedby="receipt-hint"
         />
-        <span id="receipt-hint" class="hint">Format: 3 letters followed by 10 numbers</span>
+        <span id="receipt-hint" class="hint">Format: 3 letters followed by 10 numbers (e.g., IOE1234567890)</span>
       </div>
       <div class="button-group">
         <button class="primary" id="addReceiptBtn" aria-label="Add receipt number">
           <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/>
           </svg>
-          Add
+          Add Receipt
         </button>
-        <button id="openTabsBtn" aria-label="Open API tabs for all receipt numbers">
+        <button id="openTabsBtn" aria-label="Open API tabs for all receipt numbers" disabled>
           <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
             <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
@@ -1119,18 +1851,37 @@
     </div>
   </section>
 
-  <section class="card" aria-labelledby="json-title">
-    <h2 id="json-title">Step 2: Paste JSON</h2>
+  <section class="card" aria-labelledby="json-title" id="step2Section">
+    <div class="step-header">
+      <span class="step-indicator" id="step2Indicator">2</span>
+      <h2 id="json-title">Get Case Data from USCIS</h2>
+    </div>
+    <div class="helper-callout" id="step2Helper">
+      <svg class="helper-callout-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+      </svg>
+      <div class="helper-callout-content">
+        <div class="helper-callout-title">How to get your case data</div>
+        <ol>
+          <li>Make sure you're logged into <a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener">myaccount.uscis.gov</a></li>
+          <li>Click "Open API tabs" above to open the official USCIS JSON endpoints</li>
+          <li>Copy all the JSON text from each tab (it looks like code)</li>
+          <li>Paste it into the box below and click "Save Snapshot"</li>
+        </ol>
+      </div>
+    </div>
     <div class="input-group">
       <label for="jsonText" class="sr-only">USCIS JSON Response</label>
       <textarea
         id="jsonText"
-        placeholder="Paste USCIS JSON here..."
+        placeholder="Paste the raw JSON from USCIS API here...
+
+After clicking 'Open API tabs', you'll see a page with JSON data. Copy everything from that page and paste it here."
         aria-describedby="json-hint"
-        rows="6"
+        rows="8"
       ></textarea>
-      <span id="json-hint" class="hint">Paste the raw JSON response from USCIS API</span>
-  </div>
+      <span id="json-hint" class="hint">Paste the entire JSON response from the USCIS API tab</span>
+    </div>
     <button class="primary" id="saveJsonBtn">
       <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
         <path d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6a1 1 0 10-2 0v5.586l-1.293-1.293z"/>
@@ -1142,15 +1893,55 @@
 
   <section class="card" aria-labelledby="timeline-title">
     <div class="card-header">
-      <h2 id="timeline-title">Unified Timeline</h2>
-      <button onclick="exportTimeline()" class="export-btn" aria-label="Export timeline for Reddit">
+      <div class="step-header">
+        <span class="step-indicator" id="step3Indicator">3</span>
+        <h2 id="timeline-title">Your Case Timeline</h2>
+      </div>
+      <button onclick="exportTimeline()" class="export-btn" aria-label="Export timeline for Reddit" id="exportBtn" style="display: none;">
         <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
           <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"/>
         </svg>
         Export for Reddit
       </button>
-  </div>
-    <div id="timeline" class="timeline" role="feed" aria-label="Case updates timeline"></div>
+    </div>
+    <div id="quickStatsBar" class="quick-stats" style="display: none;">
+      <div class="quick-stats-items">
+        <div class="quick-stat">
+          <span class="quick-stat-label">Total Cases</span>
+          <span class="quick-stat-value" id="statTotalCases">0</span>
+        </div>
+        <div class="quick-stat">
+          <span class="quick-stat-label">Completed</span>
+          <span class="quick-stat-value" id="statCompleted">0</span>
+        </div>
+        <div class="quick-stat">
+          <span class="quick-stat-label">In Progress</span>
+          <span class="quick-stat-value" id="statInProgress">0</span>
+        </div>
+        <div class="quick-stat">
+          <span class="quick-stat-label">Total Updates</span>
+          <span class="quick-stat-value" id="statTotalUpdates">0</span>
+        </div>
+      </div>
+      <div class="quick-stats-actions">
+        <button onclick="openAddCaseModal()" class="btn-compact">
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/>
+          </svg>
+          Add Case
+        </button>
+        <button onclick="clearAllData()" class="btn-compact" style="border-color: var(--error-border); color: var(--error);">
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
+          </svg>
+          Clear Data
+        </button>
+      </div>
+    </div>
+    <div id="caseSummary" class="case-summary-grid" style="display: none; padding: var(--space-xl);"></div>
+    <div id="timelineContainer">
+      <div id="timeline" class="timeline" role="feed" aria-label="Case updates timeline"></div>
+    </div>
   </section>
 </main>
 
@@ -1203,6 +1994,63 @@
   </div>
 </div>
 
+<div id="addCaseModal" class="modal" role="dialog" aria-labelledby="add-case-title" aria-modal="true">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 id="add-case-title">Add New Case</h3>
+      <button class="modal-close" onclick="closeAddCaseModal()" aria-label="Close modal">
+        <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+        </svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="helper-callout">
+        <svg class="helper-callout-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+        </svg>
+        <div class="helper-callout-content">
+          <div class="helper-callout-title">Quick Guide</div>
+          <div class="helper-callout-text">
+            1. Enter your receipt number below<br>
+            2. Click "Add &amp; Open API" to add the case and open the USCIS API tab<br>
+            3. Copy the JSON from the opened tab<br>
+            4. Paste it in the "Paste JSON" section
+          </div>
+        </div>
+      </div>
+      <div class="add-case-form">
+        <div class="input-group">
+          <label for="modalReceiptInput">Receipt Number</label>
+          <input
+            id="modalReceiptInput"
+            type="text"
+            placeholder="IOE1234567890"
+            pattern="[A-Z]{3}[0-9]{10}"
+            aria-describedby="modal-receipt-hint"
+          />
+          <span id="modal-receipt-hint" class="hint">Format: 3 letters + 10 numbers (e.g., IOE1234567890)</span>
+        </div>
+        <div class="form-actions">
+          <button onclick="closeAddCaseModal()">Cancel</button>
+          <button class="primary" onclick="addCaseFromModal()">
+            <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/>
+            </svg>
+            Add &amp; Open API
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="fab" id="fabAddCase" onclick="openAddCaseModal()" aria-label="Add new case">
+  <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+    <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/>
+  </svg>
+</button>
+
 <script>
 const USCIS_BASE="https://my.uscis.gov/account/case-service/api/cases/";
 const TZ="America/New_York";
@@ -1215,6 +2063,120 @@ function saveCases(c){localStorage.setItem("cases",JSON.stringify(c))}
 // Validate receipt number format
 function isValidReceipt(receipt) {
   return /^[A-Z]{3}[0-9]{10}$/.test(receipt);
+}
+
+// Update UI based on progress
+function updateProgress() {
+  const receipts = loadReceipts();
+  const cases = loadCases();
+  const hasReceipts = receipts.length > 0;
+  const hasCases = Object.keys(cases).length > 0;
+
+  // Update step 1 indicator
+  const step1Indicator = document.getElementById('step1Indicator');
+  const step1Helper = document.getElementById('step1Helper');
+  const openTabsBtn = document.getElementById('openTabsBtn');
+
+  if (hasReceipts) {
+    step1Indicator.classList.add('completed');
+    step1Indicator.innerHTML = `<svg viewBox="0 0 20 20" fill="currentColor" style="width: 1.25rem; height: 1.25rem;"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>`;
+    if (step1Helper) step1Helper.style.display = 'none';
+    openTabsBtn.disabled = false;
+  } else {
+    step1Indicator.classList.remove('completed');
+    step1Indicator.textContent = '1';
+    if (step1Helper) step1Helper.style.display = 'flex';
+    openTabsBtn.disabled = true;
+  }
+
+  // Update step 2 indicator
+  const step2Indicator = document.getElementById('step2Indicator');
+  const step2Helper = document.getElementById('step2Helper');
+  if (hasCases) {
+    step2Indicator.classList.add('completed');
+    step2Indicator.innerHTML = `<svg viewBox="0 0 20 20" fill="currentColor" style="width: 1.25rem; height: 1.25rem;"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>`;
+    if (step2Helper) step2Helper.style.display = 'none';
+  } else {
+    step2Indicator.classList.remove('completed');
+    step2Indicator.textContent = '2';
+    if (step2Helper) step2Helper.style.display = 'flex';
+  }
+
+  // Update step 3 indicator and export button
+  const step3Indicator = document.getElementById('step3Indicator');
+  const exportBtn = document.getElementById('exportBtn');
+  if (hasCases) {
+    step3Indicator.classList.add('completed');
+    step3Indicator.innerHTML = `<svg viewBox="0 0 20 20" fill="currentColor" style="width: 1.25rem; height: 1.25rem;"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>`;
+    if (exportBtn) exportBtn.style.display = 'inline-flex';
+  } else {
+    step3Indicator.classList.remove('completed');
+    step3Indicator.textContent = '3';
+    if (exportBtn) exportBtn.style.display = 'none';
+  }
+
+  // Auto-collapse onboarding sections when user has data
+  if (hasCases) {
+    const aboutSection = document.getElementById('aboutSection');
+    const receiptsSection = document.getElementById('receiptsSection');
+    const step2Section = document.getElementById('step2Section');
+
+    // Auto-collapse About and Step 1 if not manually interacted with
+    const savedStates = JSON.parse(localStorage.getItem('collapsedSections') || '{}');
+    if (savedStates.aboutSection === undefined && aboutSection && !aboutSection.classList.contains('collapsed')) {
+      aboutSection.classList.add('collapsed');
+    }
+    if (savedStates.receiptsSection === undefined && receiptsSection && !receiptsSection.classList.contains('collapsed')) {
+      receiptsSection.classList.add('collapsed');
+    }
+
+    // Show FAB and quick stats
+    const fab = document.getElementById('fabAddCase');
+    if (fab) fab.classList.add('visible');
+
+    updateQuickStats(cases);
+  } else {
+    // Hide FAB when no data
+    const fab = document.getElementById('fabAddCase');
+    if (fab) fab.classList.remove('visible');
+
+    // Hide quick stats
+    const quickStatsBar = document.getElementById('quickStatsBar');
+    if (quickStatsBar) quickStatsBar.style.display = 'none';
+  }
+}
+
+// Update quick stats
+function updateQuickStats(cases) {
+  const quickStatsBar = document.getElementById('quickStatsBar');
+  if (!quickStatsBar) return;
+
+  const totalCases = Object.keys(cases).length;
+  if (totalCases === 0) {
+    quickStatsBar.style.display = 'none';
+    return;
+  }
+
+  quickStatsBar.style.display = 'flex';
+
+  let completed = 0;
+  let inProgress = 0;
+  let totalUpdates = 0;
+
+  Object.values(cases).forEach(caseData => {
+    const latestData = caseData.history[caseData.history.length - 1].data;
+    if (latestData.closed === true) {
+      completed++;
+    } else {
+      inProgress++;
+    }
+    totalUpdates += caseData.history.length;
+  });
+
+  document.getElementById('statTotalCases').textContent = totalCases;
+  document.getElementById('statCompleted').textContent = completed;
+  document.getElementById('statInProgress').textContent = inProgress;
+  document.getElementById('statTotalUpdates').textContent = totalUpdates;
 }
 
 // render receipts
@@ -1247,6 +2209,7 @@ function renderReceipts() {
       const arr = loadReceipts().filter(x => x !== r);
       saveReceipts(arr);
       renderReceipts();
+      updateProgress();
     };
     chip.appendChild(deleteBtn);
     cont.appendChild(chip);
@@ -1267,6 +2230,8 @@ function renderReceipts() {
     `;
     collapsedCont.appendChild(collapsedChip);
   });
+
+  updateProgress();
 }
 
 // add receipt
@@ -1298,6 +2263,7 @@ document.getElementById("addReceiptBtn").onclick = () => {
   saveReceipts(arr);
   input.value = "";
   renderReceipts();
+  updateProgress();
 
   // Show success feedback
   const btn = document.getElementById("addReceiptBtn");
@@ -1577,8 +2543,88 @@ document.addEventListener("keydown", (e) => {
     if (document.getElementById("exportModal").style.display === "block") {
       closeExportModal();
     }
+    if (document.getElementById("addCaseModal").style.display === "block") {
+      closeAddCaseModal();
+    }
   }
 });
+
+// Add case modal functions
+function openAddCaseModal() {
+  const modal = document.getElementById("addCaseModal");
+  modal.style.display = "block";
+  document.body.style.overflow = "hidden";
+  document.getElementById("modalReceiptInput").focus();
+}
+
+function closeAddCaseModal() {
+  const modal = document.getElementById("addCaseModal");
+  modal.style.display = "none";
+  document.body.style.overflow = "";
+  document.getElementById("modalReceiptInput").value = "";
+}
+
+function addCaseFromModal() {
+  const input = document.getElementById("modalReceiptInput");
+  const val = input.value.trim().toUpperCase();
+
+  if (!val) {
+    input.focus();
+    return;
+  }
+
+  if (!isValidReceipt(val)) {
+    input.setCustomValidity("Please enter 3 letters followed by 10 numbers");
+    input.reportValidity();
+    return;
+  }
+
+  input.setCustomValidity("");
+  const arr = loadReceipts();
+
+  if (arr.includes(val)) {
+    input.setCustomValidity("This receipt number is already added");
+    input.reportValidity();
+    return;
+  }
+
+  arr.push(val);
+  saveReceipts(arr);
+  renderReceipts();
+  updateProgress();
+
+  // Open API tab
+  window.open(USCIS_BASE+encodeURIComponent(val),"_blank");
+
+  // Close modal
+  closeAddCaseModal();
+
+  // Scroll to paste JSON section
+  document.getElementById("step2Section").scrollIntoView({ behavior: 'smooth' });
+}
+
+// Close add case modal on outside click
+document.getElementById("addCaseModal").onclick = (e) => {
+  if (e.target === e.currentTarget) closeAddCaseModal();
+};
+
+// Clear all data
+function clearAllData() {
+  if (!confirm("Are you sure you want to delete all receipts and case data? This cannot be undone.")) {
+    return;
+  }
+
+  localStorage.removeItem("receipts");
+  localStorage.removeItem("cases");
+  localStorage.removeItem("collapsedSections");
+
+  renderReceipts();
+  renderTimeline();
+  updateProgress();
+
+  alert("All data has been cleared.");
+  location.reload();
+}
 
 // Compute differences between two JSON objects
 function computeJsonDiff(oldData, newData) {
@@ -1747,10 +2793,25 @@ document.getElementById("saveJsonBtn").onclick = () => {
   });
   saveCases(cases);
   renderTimeline();
+  updateProgress();
 
   // Clear input and show success
   document.getElementById("jsonText").value = "";
-  alert("Saved new snapshot for " + r);
+
+  // Show success message
+  const btn = document.getElementById("saveJsonBtn");
+  const originalText = btn.innerHTML;
+  btn.innerHTML = `
+    <svg class="icon" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+    </svg>
+    Saved!
+  `;
+  btn.classList.add('success');
+  setTimeout(() => {
+    btn.innerHTML = originalText;
+    btn.classList.remove('success');
+  }, 2000);
 };
 
 // convert to ET
@@ -1920,10 +2981,101 @@ function buildTimeline(){
   return items;
 }
 
+// Calculate days since date
+function daysSince(dateString) {
+  const then = new Date(dateString);
+  const now = new Date();
+  const diff = now - then;
+  return Math.floor(diff / (1000 * 60 * 60 * 24));
+}
+
+// Render case summary cards
+function renderCaseSummary() {
+  const cases = loadCases();
+  const summaryContainer = document.getElementById('caseSummary');
+
+  if (Object.keys(cases).length === 0) {
+    summaryContainer.style.display = 'none';
+    return;
+  }
+
+  summaryContainer.style.display = 'grid';
+  summaryContainer.innerHTML = '';
+
+  Object.values(cases).forEach(caseData => {
+    const latestSnapshot = caseData.history[caseData.history.length - 1];
+    const data = latestSnapshot.data;
+    const daysSinceSubmission = data.submissionTimestamp ? daysSince(data.submissionTimestamp) : null;
+    const daysSinceUpdate = data.updatedAtTimestamp ? daysSince(data.updatedAtTimestamp) : null;
+    const isCompleted = data.closed === true;
+
+    const card = document.createElement('div');
+    card.className = 'case-card';
+    card.innerHTML = `
+      <div class="case-card-header">
+        <div class="case-card-receipt">${data.receiptNumber}</div>
+        <div class="case-card-form">${data.formType || 'N/A'}</div>
+      </div>
+      <div class="case-card-status">
+        ${isCompleted ?
+          '<span class="status-badge completed">✓ Completed</span>' :
+          '<span class="status-badge active">● In Progress</span>'
+        }
+      </div>
+      <div class="case-card-status">${data.caseStatus || 'No status available'}</div>
+      <div class="case-card-meta">
+        ${daysSinceSubmission !== null ? `
+          <div class="case-card-meta-item">
+            <span class="case-card-meta-label">Filed</span>
+            <span class="case-card-meta-value">${daysSinceSubmission}d ago</span>
+          </div>
+        ` : ''}
+        ${daysSinceUpdate !== null ? `
+          <div class="case-card-meta-item">
+            <span class="case-card-meta-label">Updated</span>
+            <span class="case-card-meta-value">${daysSinceUpdate}d ago</span>
+          </div>
+        ` : ''}
+        <div class="case-card-meta-item">
+          <span class="case-card-meta-label">Snapshots</span>
+          <span class="case-card-meta-value">${caseData.history.length}</span>
+        </div>
+      </div>
+    `;
+    summaryContainer.appendChild(card);
+  });
+}
+
 // render timeline
 function renderTimeline(){
-  const items=buildTimeline();const cont=document.getElementById("timeline");cont.innerHTML="";
-  if(items.length===0){cont.textContent="No timeline yet.";return}
+  const items=buildTimeline();
+  const cont=document.getElementById("timeline");
+  const timelineContainer=document.getElementById("timelineContainer");
+  cont.innerHTML="";
+
+  // Render case summary cards
+  renderCaseSummary();
+
+  if(items.length===0){
+    timelineContainer.innerHTML = `
+      <div class="empty-state">
+        <svg class="empty-state-icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+        </svg>
+        <div class="empty-state-title">No timeline data yet</div>
+        <div class="empty-state-description">
+          Add your receipt numbers and save a snapshot to start tracking your case timeline. Your updates will appear here.
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  // Restore timeline container
+  if (!document.getElementById('timeline')) {
+    timelineContainer.innerHTML = '<div id="timeline" class="timeline" role="feed" aria-label="Case updates timeline"></div>';
+  }
+
   const groups={};
   items.forEach(it=>{if(!groups[it.et.dateKey]) groups[it.et.dateKey]=[];groups[it.et.dateKey].push(it)});
   Object.keys(groups).sort((a,b)=>new Date(b)-new Date(a)).forEach(date=>{
@@ -1947,10 +3099,11 @@ function renderTimeline(){
       t.innerHTML = `
         <div class="titem-content">
           <div>
+            <div class="titem-time">${it.et.text}</div>
             <div class="titem-main">
-              ${it.et.text} — ${it.label.replace('closed=true', 'Case completed ✨')}
-              ${businessHours ? '<span class="flag officer">👋 officer touch</span>' : '<span class="flag system">⚙️ system update</span>'}
-              ${isClosed ? '<span class="flag completed">🎉 Completed</span>' : ''}
+              <span class="titem-label">${it.label.replace('closed=true', 'Case completed ✨').replace('closed=false', '')}</span>
+              ${businessHours ? '<span class="flag officer">👋 Officer</span>' : '<span class="flag system">⚙️ System</span>'}
+              ${isClosed ? '<span class="flag completed">🎉 Complete</span>' : ''}
             </div>
             ${insight ? `<div class="insight ${insight.type}">${insight.message}</div>` : ''}
             ${isClosed ? `<div class="insight success">Congratulations! Your case has been completed.</div>` : ''}
@@ -1959,7 +3112,7 @@ function renderTimeline(){
             <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 002 4.25v11.5A2.25 2.25 0 004.25 18h11.5A2.25 2.25 0 0018 15.75V4.25A2.25 2.25 0 0015.75 2H4.25zm4.03 6.28a.75.75 0 00-1.06-1.06L4.97 9.47a.75.75 0 000 1.06l2.25 2.25a.75.75 0 001.06-1.06L6.56 10l1.72-1.72zm4.5-1.06a.75.75 0 10-1.06 1.06L13.44 10l-1.72 1.72a.75.75 0 101.06 1.06l2.25-2.25a.75.75 0 000-1.06l-2.25-2.25z" clip-rule="evenodd"/>
             </svg>
-            View JSON
+            JSON
           </button>
         </div>`;
       g.appendChild(t);
@@ -2005,7 +3158,99 @@ function initializeCollapsedSections() {
   });
 }
 
-renderReceipts();renderTimeline();initializeCollapsedSections();
+renderReceipts();renderTimeline();initializeCollapsedSections();updateProgress();
 </script>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>About USCIS Case Tracker</h3>
+      <p>
+        A free, open-source, privacy-focused case tracker for monitoring your USCIS immigration application status. Track I-485, I-765, I-131, and other immigration forms with complete privacy.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Features</h3>
+      <ul>
+        <li><a href="#receiptsSection">Track Multiple Cases</a></li>
+        <li><a href="#step2Section">Unified Timeline View</a></li>
+        <li><a href="#aboutSection">100% Client-Side Privacy</a></li>
+        <li>Smart Update Insights</li>
+        <li>Business Hours Detection</li>
+        <li>Reddit Export Feature</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Immigration Forms</h3>
+      <ul>
+        <li>I-485 (Green Card / Adjustment of Status)</li>
+        <li>I-765 (Work Permit / EAD)</li>
+        <li>I-131 (Travel Document / Advance Parole)</li>
+        <li>I-140 (Immigrant Petition)</li>
+        <li>I-130 (Family-Based Petition)</li>
+        <li>N-400 (Naturalization / Citizenship)</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="https://myaccount.uscis.gov/sign-in" target="_blank" rel="noopener">USCIS My Account</a></li>
+        <li><a href="https://github.com/humanstack/uscis-case-tracker" target="_blank" rel="noopener noreferrer">View on GitHub</a></li>
+        <li><a href="https://github.com/humanstack/uscis-case-tracker/issues" target="_blank" rel="noopener noreferrer">Report Issues</a></li>
+        <li><a href="https://github.com/humanstack/uscis-case-tracker/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 USCIS Case Tracker. Open source under MIT License.</p>
+    <p class="footer-keywords">
+      Track USCIS case status | Immigration case tracker | Green card status tracker | I-485 tracker | I-765 EAD tracker | I-131 advance parole tracker |
+      USCIS timeline tracker | Immigration status checker | Visa application tracker | Free USCIS tracker | Privacy-focused case tracker |
+      Client-side immigration tracker | Adjustment of status tracker | Work permit tracker | Travel document tracker | USCIS receipt number tracker |
+      Immigration case timeline | USCIS case updates | Green card application tracker | Immigration form tracker
+    </p>
+    <p style="margin-top: var(--space-md);">
+      <small>
+        Not affiliated with USCIS. This is an independent tool for tracking your own case status.
+        Always refer to official USCIS communications for important decisions.
+      </small>
+    </p>
+  </div>
+
+  <!-- Hidden SEO content for better indexing -->
+  <div class="sr-only-seo">
+    <h2>USCIS Case Status Tracker - Free Immigration Application Monitoring Tool</h2>
+    <p>
+      Track your USCIS immigration case status online with our free, privacy-focused case tracker.
+      Monitor green card applications (I-485), work permit (I-765 EAD), travel document (I-131 advance parole),
+      and other USCIS forms with complete privacy. Our client-side tracker ensures your immigration data never
+      leaves your browser.
+    </p>
+    <h3>Why Use Our USCIS Case Tracker?</h3>
+    <ul>
+      <li>100% free and open source USCIS case tracking</li>
+      <li>Privacy-first design - all data stays in your browser</li>
+      <li>Track unlimited immigration cases simultaneously</li>
+      <li>Unified timeline view for all your USCIS applications</li>
+      <li>Smart insights on case updates and officer actions</li>
+      <li>Business hours detection for officer activity</li>
+      <li>Easy export to Reddit for community support</li>
+      <li>Works with all USCIS forms: I-485, I-765, I-131, I-140, I-130, N-400, and more</li>
+    </ul>
+    <h3>Immigration Forms Supported</h3>
+    <p>
+      Our USCIS tracker supports all immigration forms including: I-485 Adjustment of Status (Green Card),
+      I-765 Employment Authorization Document (Work Permit/EAD), I-131 Travel Document (Advance Parole/Re-entry Permit),
+      I-140 Immigrant Worker Petition, I-130 Family-Based Immigration Petition, N-400 Naturalization Application (Citizenship),
+      I-129 Nonimmigrant Worker Petition (H-1B, L-1), I-129F Fiancé Visa, I-90 Green Card Renewal, I-751 Remove Conditions on Residence,
+      I-539 Extension/Change of Status, and all other USCIS case types.
+    </p>
+  </div>
+</footer>
+
 </body>
 </html>

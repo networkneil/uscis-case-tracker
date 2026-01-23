@@ -1,6 +1,22 @@
-# USCIS Case Tracker
+# USCIS Case Tracker - Free Privacy-Focused Immigration Status Tracker
 
-A privacy-focused, client-side USCIS case tracking tool that runs entirely in your browser. Track multiple immigration cases, view unified timelines, and monitor updates without sending any data to external servers.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Privacy First](https://img.shields.io/badge/Privacy-First-green.svg)]()
+[![No Tracking](https://img.shields.io/badge/Tracking-None-success.svg)]()
+
+A free, open-source, privacy-focused USCIS case tracking tool that runs entirely in your browser. Track multiple immigration cases (I-485, I-765, I-131, and more), view unified timelines, and monitor updates without sending any data to external servers.
+
+**🔗 Live Demo:** [https://humanstack.github.io/uscis-case-tracker/](https://humanstack.github.io/uscis-case-tracker/)
+
+## Why Use This USCIS Tracker?
+
+✅ **Completely Free** - No subscriptions, no fees, forever
+✅ **100% Private** - Your immigration data never leaves your browser
+✅ **No Account Required** - Start tracking immediately
+✅ **Track Unlimited Cases** - Monitor multiple applications simultaneously
+✅ **Smart Insights** - Understand officer vs system updates
+✅ **Community Friendly** - Export for Reddit with privacy protection
+✅ **Open Source** - Transparent, auditable code
 
 ## Features
 
@@ -85,17 +101,81 @@ A privacy-focused, client-side USCIS case tracking tool that runs entirely in yo
 - Works offline after initial load
 - Source code is open for review
 
+## Supported Immigration Forms
+
+This tracker works with all USCIS forms, including:
+
+- **I-485** - Adjustment of Status (Green Card Application)
+- **I-765** - Employment Authorization Document (Work Permit/EAD)
+- **I-131** - Travel Document (Advance Parole/Re-entry Permit)
+- **I-140** - Immigrant Worker Petition
+- **I-130** - Family-Based Immigration Petition
+- **N-400** - Naturalization Application (Citizenship)
+- **I-129** - Nonimmigrant Worker Petition (H-1B, L-1)
+- **I-129F** - Fiancé(e) Visa Petition
+- **I-90** - Green Card Renewal/Replacement
+- **I-751** - Remove Conditions on Residence
+- **I-539** - Extension/Change of Nonimmigrant Status
+- And all other USCIS case types
+
 ## Technical Details
 
-- Pure HTML/CSS/JavaScript
-- No external libraries or frameworks
-- Uses browser's localStorage for data
-- Handles timezone conversion (ET)
-- Responsive design for all devices
+- **Pure HTML/CSS/JavaScript** - No frameworks or dependencies
+- **Client-side only** - Zero server communication
+- **localStorage** - All data stored locally in your browser
+- **Timezone aware** - Automatic ET conversion
+- **Responsive design** - Works on all devices
+- **PWA Ready** - Install as app on mobile/desktop
+- **SEO Optimized** - Enhanced discoverability
+
+## SEO & Discoverability
+
+This project includes comprehensive SEO optimization:
+
+- ✅ Complete meta tags (Open Graph, Twitter Cards)
+- ✅ Structured data (Schema.org JSON-LD)
+- ✅ Semantic HTML with proper heading hierarchy
+- ✅ Sitemap.xml for search engine indexing
+- ✅ Robots.txt for crawler guidance
+- ✅ PWA manifest for app discoverability
+- ✅ Keyword-rich content and footer
+- ✅ Fast loading and performance optimized
+
+**Key Search Terms:**
+USCIS case tracker, immigration status tracker, green card tracker, I-485 tracker, I-765 tracker, work permit tracker, advance parole tracker, USCIS timeline, case status checker, free immigration tracker
+
+## Deployment
+
+### GitHub Pages (Recommended)
+
+1. Fork this repository
+2. Go to Settings → Pages
+3. Select branch and folder
+4. Your site will be live at `https://yourusername.github.io/uscis-case-tracker/`
+
+### Other Platforms
+
+The tracker works on any static hosting:
+- Netlify
+- Vercel
+- Cloudflare Pages
+- AWS S3 + CloudFront
+- Any web server
 
 ## Contributing
 
 Found a bug or want to suggest a feature? Please open an issue or submit a pull request.
+
+### Development
+
+1. Clone the repository
+2. Open `index.html` in your browser
+3. Make changes and test locally
+4. Submit a pull request
+
+## Star History
+
+If you find this tool helpful, please consider giving it a star ⭐ on GitHub!
 
 ## License
 
