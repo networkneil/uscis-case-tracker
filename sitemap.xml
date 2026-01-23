@@ -6,7 +6,7 @@
 
   <!-- Main Page -->
   <url>
-    <loc>https://humanstack.github.io/uscis-case-tracker/</loc>
+    <loc>https://casetracker.xyz/uscis-case-tracker/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
   <!-- Index page (if different from root) -->
   <url>
-    <loc>https://humanstack.github.io/uscis-case-tracker/index.html</loc>
+    <loc>https://casetracker.xyz/uscis-case-tracker/index.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
